@@ -19,7 +19,6 @@ class HomesController extends Controller
             return view('home');
         }
 
-        // フォルダがあればそのフォルダのタスク一覧にリダイレクトする
         return redirect()->route('books.index', [
             'id' => $folder->id,
         ]);

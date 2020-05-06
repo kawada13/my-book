@@ -16,6 +16,7 @@
            class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}"
         >
             {{ $folder->genre }}
+            {!! link_to_route('folders.edit', '編集', ['id' => $current_folder_id]) !!}
          </a>
     　@endforeach
      </div>

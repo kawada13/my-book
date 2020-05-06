@@ -35,6 +35,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/folders/create', 'FoldersController@create')->name('folders.create');
     Route::post('/folders/create', 'FoldersController@store')->name('folders.store');
     
+    Route::get('/folders/{id}/edit', 'FoldersController@edit')->name('folders.edit');
+    Route::put('/folders/{id}/edit', 'FoldersController@update')->name('folders.update');
+    
     Route::get('/folders/{id}/books/create', 'BooksController@create')->name('books.create');
     Route::post('/folders/{id}/books/search', 'SearchController@serch')->name('search.search');
     Route::post('/folders/{id}/books/create', 'BooksController@store')->name('books.store');
